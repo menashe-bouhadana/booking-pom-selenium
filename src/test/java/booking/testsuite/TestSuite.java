@@ -42,8 +42,23 @@ public class TestSuite {
         tc4.runTestcaseLocationSearch();
     }
 
-    @AfterTest
-    public void Teardown() {
-        wd.quit();
+    @Test
+    @Description("Count and Filter Search Results")
+    public void testCase5() {
+        TestBookingResults tc5 = new TestBookingResults(wd);
+        tc5.runTestcaseResultsScreen();
     }
+
+    @Test
+    @Description("Pick a room and make an order")
+    public void testCase6() {
+        TestBookingReservation tc6 = new TestBookingReservation(wd);
+        tc6.runTestcaseReservationScreen();
+    }
+
+
+//    @AfterTest
+//    public void Teardown() {
+//        wd.quit();
+//    }
 }

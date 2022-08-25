@@ -82,6 +82,7 @@ public class PageBookingRegister extends BaseMethods {
     }
 
     public void becauseOfValidationGoToHome() {
+        System.out.println("Registration Successes, Going back home");
         visit("https://booking.com/");
     }
 }
