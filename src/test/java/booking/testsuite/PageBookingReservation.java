@@ -10,6 +10,7 @@ public class PageBookingReservation extends BaseMethods {
     }
 
     public void selectRoomsFromDropDown() {
+        waitUntilElementVisible(By.name("nr_rooms_bbasic_"));
         selectFromDropDownListByValue(By.name("nr_rooms_bbasic_"), "1");
 
         String roomCost = getTextByLocator(By.cssSelector(".hprt-reservation-total-price"));
