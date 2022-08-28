@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/menashbouhadana/IdeaProjects/BaseForProjectGmar/src/test/java/TestSuite/TestSuite.java"><classes><class name="TestSuite.TestSuite"><methods><include name="testCase1"/><include name="testCase2"/><include name="testCase3"/><include name="testCase4"/><include name="testCase5"/><include name="testCase6"/></methods></class></classes></test></suite>
