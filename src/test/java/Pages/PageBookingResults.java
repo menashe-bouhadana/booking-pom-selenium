@@ -27,7 +27,6 @@ public class PageBookingResults extends BaseMethods {
         System.out.println(resultCount);
 
         Allure.addAttachment(resultCount, new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
-
     }
 
     @Step("Click on the checkbox with breakfest included")
@@ -35,7 +34,6 @@ public class PageBookingResults extends BaseMethods {
         waitUntilElementVisible(By.cssSelector("div[data-filters-item=\"popular:mealplan=1\"]"));
         click(By.cssSelector("div[data-filters-item=\"popular:mealplan=1\"]"));
         Allure.addAttachment("Click on the checkbox with breakfest included", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
-
     }
 
     @Step("Click on the first search result item")

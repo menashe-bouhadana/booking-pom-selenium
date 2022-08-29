@@ -26,13 +26,11 @@ public class PageBookingReservation extends BaseMethods {
         System.out.println("Room Cost: " + roomCost);
 
         Allure.addAttachment("Room Cost: " + roomCost, new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
-
     }
 
     @Step("Click reserve button")
     public void clickReserve() {
         click(By.cssSelector(".js-reservation-button"));
         Allure.addAttachment("Click reserve button", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
-
     }
 }

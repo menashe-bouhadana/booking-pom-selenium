@@ -39,6 +39,7 @@ public class PageBookingHome extends BaseMethods {
     @Step("Wait for search input to be visible")
     public void waitForLocationFieldToBeVisible() {
         waitUntilElementVisible(By.cssSelector(".sb-destination__input"));
+
         Allure.addAttachment("Wait for search input to be visible", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
 

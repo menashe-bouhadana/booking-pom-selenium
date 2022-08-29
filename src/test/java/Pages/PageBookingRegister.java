@@ -34,6 +34,7 @@ public class PageBookingRegister extends BaseMethods {
 
         String ErrorMessage = getTextByLocator(By.cssSelector(".fD2Lif3G4ehCgKZJDFwf"));
         System.out.println(ErrorMessage);
+
         Allure.addAttachment(ErrorMessage, new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
 
     }
@@ -41,6 +42,7 @@ public class PageBookingRegister extends BaseMethods {
     @Step("Clear input from email field")
     public void clearEmailField() {
         removeInput(By.cssSelector("#username"));
+
         Allure.addAttachment("Clear input from email field", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
 
     }
@@ -49,6 +51,7 @@ public class PageBookingRegister extends BaseMethods {
     public void testCorrectEmailField() {
         typeInto(By.cssSelector("#username"), "davidboeitheking@gmail.com");
         click(By.cssSelector("button[type=submit]"));
+
         Allure.addAttachment("Test email input field with correct input", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
 
     }
@@ -59,6 +62,7 @@ public class PageBookingRegister extends BaseMethods {
         if (isDisplayed(By.cssSelector("#new_password"))) {
             System.out.println("Switched to password confirmation step");
         }
+
         Allure.addAttachment("Wait for the password step to load", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
 
@@ -69,6 +73,7 @@ public class PageBookingRegister extends BaseMethods {
 
         String ErrorMessage = getTextByLocator(By.cssSelector(".fD2Lif3G4ehCgKZJDFwf"));
         System.out.println(ErrorMessage);
+
         Allure.addAttachment(ErrorMessage, new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
 
@@ -111,7 +116,6 @@ public class PageBookingRegister extends BaseMethods {
     public void testCorrectPasswordFields() {
         typeInto(By.cssSelector("#new_password"), "Abc10203040");
         typeInto(By.cssSelector("#confirmed_password"), "Abc10203040");
-
         click(By.cssSelector("button[type=submit]"));
 
         Allure.addAttachment("Test password input fields with correct input", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));

@@ -6,14 +6,10 @@ import Tests.TestBookingRegister;
 import Tests.TestBookingReservation;
 import Tests.TestBookingResults;
 import io.qameta.allure.*;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.io.ByteArrayInputStream;
 
 public class TestSuite {
     WebDriver wd;
