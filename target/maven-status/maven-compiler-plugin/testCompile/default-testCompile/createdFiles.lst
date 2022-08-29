@@ -1,0 +1,12 @@
+Pages/PageBookingResults.class
+TestSuite/TestSuite.class
+Pages/PageBookingReservation.class
+Tests/TestBookingHome.class
+Pages/PageBookingRegister.class
+Pages/PageBookingHome.class
+Tests/TestBookingReservation.class
+Tests/TestBookingRegister.class
+SeleniumHelper/BaseMethods.class
+SeleniumHelper/BaseMethods$1.class
+Tests/TestBookingResults.class
+SeleniumHelper/Utils.class
