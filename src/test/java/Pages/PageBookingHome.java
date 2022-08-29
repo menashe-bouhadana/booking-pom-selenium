@@ -34,10 +34,12 @@ public class PageBookingHome extends BaseMethods {
         click(By.cssSelector(".js-header-login-link:first-of-type"));
     }
 
+    @Step("Wait for search input to be visible")
     public void waitForLocationFieldToBeVisible() {
         waitUntilElementVisible(By.cssSelector(".sb-destination__input"));
     }
 
+    @Step("Read from CSV file and Type into Search Field")
     public void readFromCSVAndTypeIntoSearchField() {
         try {
             csvReader = new CSVReader(new FileReader(CSVFile));
@@ -54,6 +56,7 @@ public class PageBookingHome extends BaseMethods {
         }
     }
 
+    @Step("Print location search results")
     public void countLocationResults() {
         waitUntilElementVisible(By.cssSelector(".search_hl_name"));
         List<WebElement> lst = findMultipleElements(By.cssSelector(".search_hl_name"));
@@ -63,11 +66,13 @@ public class PageBookingHome extends BaseMethods {
         }
     }
 
+    @Step("Click on the first result")
     public void clickOnTheFirstResult() {
         waitUntilElementVisible(By.cssSelector(".search_hl_name"));
         click(By.cssSelector(".search_hl_name:first-of-type"));
     }
 
+    @Step("Click and pick vacation dates")
     public void clickAndPickVacationDates() {
 
         WebElement vacationStart = findElement(By.cssSelector(".bui-calendar__date span[aria-label=\"15 September 2022\"]"));
@@ -77,6 +82,7 @@ public class PageBookingHome extends BaseMethods {
         vacationEnd.click();
     }
 
+    @Step("Click the search submit button")
     public void clickSubmitBtn() {
         click(By.cssSelector(".sb-searchbox__button"));
     }
