@@ -28,7 +28,7 @@ public class PageBookingHome extends BaseMethods {
         visit("https://booking.com");
     }
 
-    @Step("Click on Register Button")
+    @Step("Click on the register button")
     public void clickOnRegister() {
         waitUntilElementVisible(By.cssSelector(".js-header-login-link:first-of-type"));
         click(By.cssSelector(".js-header-login-link:first-of-type"));
