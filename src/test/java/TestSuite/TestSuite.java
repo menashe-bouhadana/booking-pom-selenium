@@ -32,7 +32,6 @@ public class TestSuite {
     public void testCase1() {
         TestBookingHome tc1 = new TestBookingHome(wd);
         tc1.runTestcaseHomeScreen();
-        Allure.addAttachment("Website Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Test
@@ -44,7 +43,6 @@ public class TestSuite {
     public void testCase2() {
         TestBookingRegister tc2 = new TestBookingRegister(wd);
         tc2.runTestcaseEmailScreen();
-        Allure.addAttachment("Registration Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Test
@@ -56,7 +54,6 @@ public class TestSuite {
     public void testCase3() {
         TestBookingRegister tc3 = new TestBookingRegister(wd);
         tc3.runTestCasePasswordScreen();
-        Allure.addAttachment("Registration Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Test
@@ -68,7 +65,6 @@ public class TestSuite {
     public void testCase4() {
         TestBookingHome tc4 = new TestBookingHome(wd);
         tc4.runTestcaseLocationSearch();
-        Allure.addAttachment("Search for Vacation Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Test
@@ -80,7 +76,6 @@ public class TestSuite {
     public void testCase5() {
         TestBookingResults tc5 = new TestBookingResults(wd);
         tc5.runTestcaseResultsScreen();
-        Allure.addAttachment("Filter Search Results Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Test
@@ -92,7 +87,6 @@ public class TestSuite {
     public void testCase6() {
         TestBookingReservation tc6 = new TestBookingReservation(wd);
         tc6.runTestcaseReservationScreen();
-        Allure.addAttachment("Reservation Flow", new ByteArrayInputStream(((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES)));
     }
 
     @AfterTest
