@@ -18,8 +18,8 @@ public class PageBookingReservation extends BaseMethods {
 
     @Step("Select amount of rooms from the dropdown")
     public void selectRoomsFromDropDown() {
-        waitUntilElementVisible(By.cssSelector("#hprt_nos_select_18579605_131368017_2_41_0"));
-        selectFromDropDownListByValue(By.cssSelector("#hprt_nos_select_18579605_131368017_2_41_0"), "1");
+        waitUntilElementVisible(By.cssSelector("#hprt-table > tbody > tr:nth-child(1) > td.hprt-table-cell.hprt-table-room-select > div > select"));
+        selectFromDropDownListByValue(By.cssSelector("#hprt-table > tbody > tr:nth-child(1) > td.hprt-table-cell.hprt-table-room-select > div > select"), "1");
 
         String roomCost = getTextByLocator(By.cssSelector(".hprt-reservation-total-price"));
 

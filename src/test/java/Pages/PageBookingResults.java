@@ -43,9 +43,19 @@ public class PageBookingResults extends BaseMethods {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        By checkButton = By.cssSelector("div:nth-child(3) > div.d20f4628d0 > div.b978843432 > div > div.a1b3f50dcd.b2fe1a41c3.a7c67ebfe5.d19ba76520.d14b211b4f > div.b1e6dd8416 > div > div:nth-child(1) > div > h3 > a");
-        waitUntilElementVisible(checkButton);
-        click(checkButton);
+
+
+        By checkButton = By.cssSelector("div:nth-child(2) > div.d20f4628d0 > div.b978843432 > div > div.d7449d770c.a081c98c6f > div.e41894cca1 > div > div.a68bfa09c2 > a");
+        By checkButton2 = By.cssSelector("div:nth-child(3) > div.d20f4628d0 > div.b978843432 > div > div.d7449d770c.a081c98c6f > div.e41894cca1 > div > div.a68bfa09c2 > a");
+
+        if (isDisplayed(checkButton)) {
+            waitUntilElementVisible(checkButton);
+            click(checkButton);
+        } else {
+            waitUntilElementVisible(checkButton2);
+            click(checkButton2);
+        }
+
         Allure.addAttachment("Click on the first search result item", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
 
     }

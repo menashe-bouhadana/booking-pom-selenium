@@ -20,6 +20,11 @@ public class Utils {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
+
+            case 3:
+                WebDriverManager.safaridriver().setup();
+                driver = new SafariDriver();
+                break;
         }
         return driver;
     }

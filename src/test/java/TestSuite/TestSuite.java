@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+//
 public class TestSuite {
     WebDriver wd;
 
@@ -85,8 +85,8 @@ public class TestSuite {
         tc6.runTestcaseReservationScreen();
     }
 
-    @AfterTest
-    public void Teardown() {
-        wd.quit();
-    }
+//    @AfterTest
+//    public void Teardown() {
+//        wd.quit();
+//    }
 }
